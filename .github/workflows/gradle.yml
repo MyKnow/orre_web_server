@@ -22,7 +22,8 @@ jobs:
           script: |
             sudo systemctl stop nginx
             cd /home/ubuntu
+            mkdir web_server
+            cd web_server
             rm -rf *
             git clone https://github.com/kolo4917/orre_web_server.git .
-            # Additional setup commands if needed
             sudo systemctl start nginx
