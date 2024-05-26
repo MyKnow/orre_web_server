@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="원격 웨이팅, 원격 주문">
+  <meta name="keywords" content="orre, 원격, 웨이팅, 주문">
+  <meta name="author" content="myknow">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="오리">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Google -->
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+
+  <title>orre_web</title>
+  <script>
+    const serviceWorkerVersion = "2386984497";
+  </script>
+  <script src="flutter.js" defer></script>
+  <script src="main.dart.js" defer></script>
+  <script>
+    function onVisibilityChange(state) {
+      if (window.onVisibilityChangeHandler) {
+        window.onVisibilityChangeHandler(state);
+      }
+    }
+
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) {
+        onVisibilityChange('hidden');
+      } else {
+        onVisibilityChange('visible');
+      }
+    });
+  </script>
+</head>
+<head>
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUN_y00BhVhEt9E0YeasT2qXktJr90dvo"></script>
+</head>
+<body>
+  <script>
+    window.addEventListener('load', function() {
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
